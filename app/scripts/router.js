@@ -6,14 +6,14 @@ var MainRouter = Backbone.Router.extend({
 
 initialize: function(){
     this.videos = new VideosCollection;
-    this.videos.on('add', function(item){
-      new VideoView({model: item})
+    this.videos.on('add', function(video){ // Ask about this?
+      new VideoView({model: video})
     })
   },
  
-  showShops: function(videos){
-    if (keyword) {
-      this.items.url = "https://api.etsy.com/v2/listings/active.js?keywords="+ keyword +"&includes=Images&api_key=kr9rjq7dc9c24jv6fccq2hus&callback=?"
+  polerVideo: function(videos){
+    //"http://vimeo.com/api/v2/polerstuff/videos.json?callback=myFunction"
+      this.videos.url = "http://vimeo.com/api/v2/polerstuff/videos.json?callback=myFunction"
     }
     this.items.fetch();
   }
