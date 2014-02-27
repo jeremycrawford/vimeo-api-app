@@ -32,13 +32,14 @@
                 <ul class="nav nav-pills pull-right">
                     <li class="active"><a href="#poler/videos">Videos</a></li>
                 </ul>
-                <h3 class="text-muted">Poler Stuff</h3>
+                <h3 class="text-muted">Welcome to the Outdoors</h3>
             </div>
 
-          
-            <div class="row marketing">
-                <div class="col-lg-6">
-              
+            <div class="jumbotron">
+                <div class="row marketing">
+                    <div class="col-lg-12">
+                  
+                    </div>
                 </div>
             </div>
             
@@ -47,8 +48,9 @@
 
         <script type="text/template" id="videos-template">
 
-
-          <iframe src="//player.vimeo.com/video/<%= this.model.get('id') %>" width="500" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/<%= this.model.get('id') %>">Landlouping</a> from <a href="http://vimeo.com/polerstuff">Poler Outdoor Stuff</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+        <div class="vimeo-video">
+          <iframe src="//player.vimeo.com/video/<%= this.model.get('id') %>" width="295" height="166" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/<%= this.model.get('id') %>" class="video-name">Landlouping</a> from <a href="http://vimeo.com/polerstuff">Poler Outdoor Stuff</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+        </div>
     
         </script>
 

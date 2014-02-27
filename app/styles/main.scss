@@ -57,6 +57,22 @@ body {
     }
 }
 
+.container .jumbotron {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.vimeo-video {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+
+    .video-name {
+    }
+    
+}
+
+
 /* Supporting marketing content */
 .marketing {
     margin: 40px 0;

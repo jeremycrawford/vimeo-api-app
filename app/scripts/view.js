@@ -5,7 +5,7 @@ var MainView = Backbone.View.extend({
   initialize: function(){
     console.log('view is showing')
 
-    $('.marketing').append(this.el);
+    $('.jumbotron').append(this.el);
       this.render();
     console.log('render is rendering')
 
