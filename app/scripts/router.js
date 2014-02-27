@@ -21,12 +21,12 @@ var MainRouter = Backbone.Router.extend({
     console.log('show me the money honey')
   }
 
+});
 
 
 
 
 
-})
 
 
 
