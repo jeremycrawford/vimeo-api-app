@@ -4,7 +4,7 @@ var ListView = Backbone.View.extend({
   createTemplate: _.template($('#videos-template').text()),
 
   events: {
-    "click .thumbnails": "createFeaturedView",
+    "click .thumbnails": "createFeaturedView"
   },
 
   initialize: function(){
