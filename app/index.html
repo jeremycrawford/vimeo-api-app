@@ -26,35 +26,41 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!-- <img src="images/foggy-mountain.jpg" class="img-responsive" alt="Responsive image"> -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+            <ul class="nav nav-pills pull-right nav-buttons">
+                <li><a href="#poler/videos">Videos</a></li>
+                <li><a href="#poler/home">Home</li>
+            </ul>
+            <h3 class="text-muted header-title">The Great Outdoors</h3>
+          </div>
+        </nav>
 
-        <img src="images/foggy-mountain.jpg" class="img-responsive" alt="Responsive image">
-        <div class="container">
-            <div class="header">
-                <ul class="nav nav-pills pull-right">
-                    <li><a href="#poler/videos">Videos</a></li>
-                </ul>
-                <h3 class="text-muted">Welcome to the Great Outdoors</h3>
-            </div>
 
-
-            <div class="jumbotron">
-                <div class="row marketing">
-                    <div class="col-lg-12">
-                  
-                    </div>
-                </div>
-            </div>
             
-           
+        <div class="container">
+            <div class="jumbotron">
+                <div class="main-featured-video"></div>
+                <div class="featured-video"></div>
+           </div>
         </div>
+
+
+        <script type="text/template" id="featured-template">
+            <div class="vimeo-video">
+              <iframe src="//player.vimeo.com/video/<%= this.model.get('id') %>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/<%= this.model.get('id') %>" class="video-name">Landlouping</a> from <a href="http://vimeo.com/polerstuff">Poler Outdoor Stuff</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+            </div>
+        </script>
+
 
         <script type="text/template" id="videos-template">
-
-        <div class="vimeo-video">
-          <iframe src="//player.vimeo.com/video/<%= this.model.get('id') %>" width="295" height="166" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/<%= this.model.get('id') %>" class="video-name">Landlouping</a> from <a href="http://vimeo.com/polerstuff">Poler Outdoor Stuff</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+        <div class="vimeo-thumbnails">
+          <img src="<%= thumbnail_medium %>">
         </div>
-    
         </script>
+
+    
 
 
         <!-- build:js scripts/vendor.js -->
@@ -91,9 +97,10 @@
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/featured-view.js"></script>
+        <script src="scripts/list-view.js"></script>
         <script src="scripts/router.js"></script>
         <script src="scripts/model.js"></script>
-        <script src="scripts/view.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
