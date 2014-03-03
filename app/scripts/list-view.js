@@ -14,15 +14,13 @@ var ListView = Backbone.View.extend({
       this.listenTo(this.model, "change", this.render);
   },
   render: function(){
-    this.$el.html(this.createTemplate(this.model.attributes));
+    this.$el.html(this.createTemplate(this.model));
   },
   createFeaturedView: function(){
     new FeaturedView( {model: this.model })
   }
 
 });
-
-
 
 
 

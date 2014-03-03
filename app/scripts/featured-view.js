@@ -4,7 +4,6 @@ var FeaturedView = Backbone.View.extend({
   mainTemplate: _.template($('#featured-template').text()),
 
   initialize: function(){
-    console.log('view is showing')
     $('.main-featured-video').html(this.el);
       this.render();
   },

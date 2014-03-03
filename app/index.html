@@ -30,10 +30,10 @@
         <nav class="navbar navbar-default navbar-static-top" role="navigation">
           <div class="container">
             <ul class="nav nav-pills pull-right nav-buttons">
+                <li><a href="#poler/home">Home</a></li>
                 <li><a href="#poler/videos">Videos</a></li>
-                <li><a href="#poler/home">Home</li>
             </ul>
-            <h3 class="text-muted header-title">The Great Outdoors</h3>
+            <h3 class="text-muted header-title">My Vimeo</h3>
           </div>
         </nav>
 
@@ -48,16 +48,12 @@
 
 
         <script type="text/template" id="featured-template">
-            <div class="vimeo-video">
               <iframe src="//player.vimeo.com/video/<%= this.model.get('id') %>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/<%= this.model.get('id') %>" class="video-name">Landlouping</a> from <a href="http://vimeo.com/polerstuff">Poler Outdoor Stuff</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-            </div>
         </script>
 
 
         <script type="text/template" id="videos-template">
-        <div class="vimeo-thumbnails">
           <img src="<%= thumbnail_medium %>">
-        </div>
         </script>
 
     
@@ -99,8 +95,8 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/featured-view.js"></script>
         <script src="scripts/list-view.js"></script>
-        <script src="scripts/router.js"></script>
         <script src="scripts/model.js"></script>
+        <script src="scripts/router.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
