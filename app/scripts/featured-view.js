@@ -1,15 +1,18 @@
 var FeaturedView = Backbone.View.extend({
 
-  className: "featured",
-  mainTemplate: _.template($('#featured-template').text()),
+  className: "main-video",
+  createTemplate: _.template($('#featured-template').text()),
 
   initialize: function(){
-    $('.main-featured-video').html(this.el);
+    console.log('view is showing')
+    $('.featured-video').html(this.el);
       this.render();
+      this.listenTo(this.model, "change", this.render);
   },
+
   render: function(){
-    var mainRenderedTemplate = this.mainTemplate(this.model.attributes);
-    this.$el.html(mainRenderedTemplate);
-  },
+    console.log('shizer!!!');
+    this.$el.html(this.createTemplate(this.model.attributes));
+  }
 
 });
