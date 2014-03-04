@@ -1,7 +1,8 @@
 var MainRouter = Backbone.Router.extend({
   routes: {
 
-    "poler/:videos" : "polerVideo"
+    // "poler/:video"  : "mainVideo"
+    "poler/:thumbs" : "polerVideo"
 
   },
 
@@ -12,7 +13,7 @@ var MainRouter = Backbone.Router.extend({
   polerVideo: function(){
    var cool = this.videos.fetch();
     this.videos.on('add', function(video){
-      if ($('.small-videos').children().length < 5) {
+      if ($('.small-videos').children().length < 8) {
         new ListView({model: video})
       }
     })

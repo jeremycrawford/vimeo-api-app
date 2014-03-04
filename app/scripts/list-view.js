@@ -3,6 +3,10 @@ var ListView = Backbone.View.extend({
   className: "thumbnails",
   createTemplate: _.template($('#videos-template').text()),
 
+  events: {
+    "click thumbnails": "thumbnails"
+  },
+
   initialize: function(){
     console.log('view is showing')
     $('.small-videos').append(this.el);
@@ -12,7 +16,7 @@ var ListView = Backbone.View.extend({
 
   render: function(){
     console.log('shizer!!!');
-    this.$el.html(this.createTemplate(this.model));
+    this.$el.html(this.createTemplate(this.model.attributes));
   }
 
 });
